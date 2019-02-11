@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sqlite_start"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.cuyanik.sqlitedatabaseapp.SqliteStartActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Name"
+            android:layout_width="82dp"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:gravity="center_vertical">
+        </TextView>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter Name"
+            android:id="@+id/etName">
+
+        </EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Surname"
+            android:layout_width="82dp"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:gravity="center_vertical">
+        </TextView>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter Surname"
+            android:id="@+id/etSurname">
+
+        </EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <TextView
+            android:text="Age/Salary/Gender"
+            android:layout_width="82dp"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:gravity="center_vertical">
+        </TextView>
+
+        <EditText
+            android:layout_width="74dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/etAge"
+            android:hint="Age"
+            android:layout_weight="0.25" />
+
+        <EditText
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/etSalary"
+            android:hint="Salary"
+            android:layout_weight="0.10" />
+
+        <Spinner
+            android:layout_width="126dp"
+            android:layout_height="match_parent"
+            android:id="@+id/spGender"
+            android:layout_weight="0.92"
+            android:entries="@array/GenderEntries"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="Add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAdd"
+            android:layout_weight="1"
+            android:onClick="BtnAddClick" />
+
+        <Button
+            android:text="Delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDelete"
+            android:layout_weight="1"
+            android:onClick="BtnDeleteClick" />
+
+        <Button
+            android:text="Update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnUpdate"
+            android:layout_weight="1"
+            android:onClick="BtnUpdateClick" />
+
+        <Button
+            android:text="Clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnClear"
+            android:layout_weight="1"
+            android:onClick="BtnClearTable" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lvEmployees" />
+    </LinearLayout>
+
+
+</LinearLayout>

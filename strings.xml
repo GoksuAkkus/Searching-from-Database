@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SqliteDatabaseApp</string>
+
+    <string-array name="GenderEntries">
+
+        <item>Male</item>
+        <item>Female</item>
+
+    </string-array>
+
+</resources>
